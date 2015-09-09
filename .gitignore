@@ -1,0 +1,16 @@
+###################
+# Compiled Source #
+###################
+.pyc
+
+
+###############
+# Directories #
+###############
+/.DS_Store
+
+
+#########
+# Local #
+#########
+local_settings.py
