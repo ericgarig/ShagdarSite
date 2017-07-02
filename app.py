@@ -7,3 +7,7 @@ app.config.from_object('config')
 mail = Mail(app)
 
 from views import *
+
+
+if __name__ == '__main.py__':
+    app.run()
