@@ -1,0 +1,40 @@
+{% from "_render_field.html" import render_field %}
+
+{% block content %}
+
+<div class="inner cover">
+	<h1 class="cover-heading">Hello</h1>
+	<p class="lead">
+		I'm Erik Shagdar,
+		<br>
+		I am a developer based in NYC, currently working as a database developer at a <a href="http://www.hotelworkers.org/home/" target="_blank">union</a>. 
+		I am interested in data visualization. I enjoy 3D printing and tinkering with hardware.
+	</p>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalView" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<p class="modal-title" id="contactModalView">Contact</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form method="POST" action="{{ url_for('index') }}">
+					{{ form.hidden_tag() }}
+
+					{{ render_field(form.email )}}
+					{{ render_field(form.subject )}}
+					{{ render_field(form.message )}}
+					<button type="submit" class="btn btn-primary pull-right">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock%}

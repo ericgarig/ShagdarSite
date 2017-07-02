@@ -13,4 +13,4 @@
 #########
 # Local #
 #########
-local_settings.py
+config.py

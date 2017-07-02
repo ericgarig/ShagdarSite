@@ -1,0 +1,20 @@
+{% block content %}
+
+<!-- contact alert -->
+{% if alert=='sent' %}
+<div class="alert alert-success" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Thanks!</strong> I've been notified of your message.
+</div>
+{% elif alert=='fail' %}
+<div class="alert alert-danger" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Oh no!</strong> Looks like you did not correctly fill out the contact form.
+</div>
+{% endif %}
+
+{% endblock%}
