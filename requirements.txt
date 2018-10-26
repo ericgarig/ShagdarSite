@@ -4,7 +4,7 @@ decorator==4.3.0
 Flask==1.0.2
 Flask-Mail==0.9.1
 Flask-WTF==0.14.2
-gunicorn==19.4.5
+gunicorn==19.5.0
 infinity==1.4
 intervals==0.8.1
 itsdangerous==0.24
