@@ -1,3 +1,4 @@
+{% import 'macros/flash.html' as flash with context %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@
 		<link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
 
 		<!-- Glyphs -->
-		<script src="https://use.fontawesome.com/a0f21521f8.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	</head>
 
 
@@ -27,13 +28,13 @@
 		<div class="site-wrapper">
 			<div class="site-wrapper-inner">
 				<div class="cover-container">
-
-					{% include "navbar.html" %}
-
-					{% include "alert.html" %}
-
-					{% include "body.html" %}
-
+					<div class="masthead clearfix">
+						<div class="inner">
+							{{ flash.render() }}
+							{% include "navbar.html" %}
+						</div>
+					</div>
+					{% block content %}{% endblock %}
 					{% include "footer.html" %}
 				</div>
 			</div>

@@ -62,6 +62,13 @@ body {
 
 
 /*
+ * Alert
+ */
+.alert {
+   text-align: left;
+}
+
+/*
  * Header
  */
 .masthead-brand {
