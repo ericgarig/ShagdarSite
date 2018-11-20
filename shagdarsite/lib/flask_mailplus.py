@@ -1,7 +1,7 @@
 """Send an email."""
 from flask import render_template
 
-from shagdar_site.extensions import mail
+from extensions import mail
 
 
 def send_template_message(template=None, ctx=None, *args, **kwargs):

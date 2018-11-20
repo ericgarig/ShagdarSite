@@ -10,6 +10,6 @@ setup(
     ],
     entry_points="""
         [console_scripts]
-        shagdar_site=cli.cli:cli
+        shagdarsite=cli.cli:cli
     """,
 )

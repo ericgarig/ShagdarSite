@@ -1,8 +1,8 @@
 """Main flask app file."""
 from flask import Flask
 
-from shagdar_site.blueprints.page import page
-from shagdar_site.extensions import csrf, mail
+from blueprints.page import page
+from extensions import csrf, mail
 
 
 def create_app(settings_override=None):

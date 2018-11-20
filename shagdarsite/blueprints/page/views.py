@@ -1,6 +1,7 @@
 """Page bluepirnt views."""
 from flask import Blueprint, flash, redirect, render_template, request, url_for
-from shagdar_site.blueprints.page.forms import ContactForm
+
+from blueprints.page.forms import ContactForm
 
 page = Blueprint('page', __name__, template_folder='templates')
 
@@ -11,7 +12,7 @@ def index():
     form = ContactForm()
     if form.validate_on_submit():
         # This prevents circular imports
-        from shagdar_site.blueprints.page.tasks import deliver_contact_email
+        from blueprints.page.tasks import deliver_contact_email
 
         deliver_contact_email(request.form.get('email'),
                               request.form.get('message'))
