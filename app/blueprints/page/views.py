@@ -1,14 +1,15 @@
-"""Page bluepirnt views."""
+"""Page endpoints."""
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 
 from blueprints.page.forms import ContactForm
+
 
 page = Blueprint('page', __name__, template_folder='templates')
 
 
 @page.route('/', methods=['GET', 'POST'])
 def index():
-    """Render home page."""
+    """Render index."""
     form = ContactForm()
     if form.validate_on_submit():
         # This prevents circular imports

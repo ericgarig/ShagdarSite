@@ -1,24 +1,20 @@
-"""Main flask app file."""
+"""Main app."""
 from flask import Flask
+from config import BaseConfig
 
 from blueprints.page import page
 from extensions import csrf, mail
 
 
-def create_app(settings_override=None):
+def create_app():
     """
     Create a Flask application using the app factory pattern.
 
-    :param settings_override: Override settings
     :return: Flask app
     """
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__)
 
-    app.config.from_object('config.settings')
-    app.config.from_pyfile('settings.py', silent=True)
-
-    if settings_override:
-        app.config.update(settings_override)
+    app.config.from_object(BaseConfig)
 
     app.register_blueprint(page)
     register_extensions(app)
