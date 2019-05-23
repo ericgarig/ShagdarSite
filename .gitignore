@@ -9,7 +9,7 @@
 # Directories #
 ###############
 /.DS_Store
-/venv
+/app/venv
 /instance/settings.py
 
 

@@ -10,7 +10,7 @@
 	<p class="lead">
 		I'm Erik Shagdar,
 		<br>
-		I am a developer based in NYC, currently working as a database developer at a <a href="http://www.hotelworkers.org/home/" target="_blank">union</a>. 
+		I am a developer based in NYC, currently working as a denior developer at a <a href="http://www.hotelworkers.org/home/" target="_blank">union</a>. 
 		I am interested in data visualization. I enjoy 3D printing and tinkering with hardware.
 	</p>
 </div>
@@ -29,11 +29,13 @@
 			<div class="modal-body">
 				{% call f.form_tag('page.index') %}
 
-					{% call f.form_group(form.email, css_class='margin-bottom', placeholder='E-mail address') %}
+					{% call f.form_group(form.email, css_class='margin-bottom', placeholder='Your email address') %}
 					{% endcall %}
 
-					{% call f.form_group(form.message, css_class='margin-bottom', placeholder='The more we know, the easier it will be to help you', rows='12') %}
+					{% call f.form_group(form.message, css_class='margin-bottom', placeholder='Write me a message...', rows='12') %}
 					{% endcall %}
+
+					 {{ form.recaptcha }}
 
 					<button type="submit" class="btn btn-primary">Send e-mail</button>
 				{% endcall %}
