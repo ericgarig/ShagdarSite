@@ -1,7 +1,8 @@
 """Forms out page blueprint."""
 from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import TextAreaField
-from wtforms_components import EmailField
+
+from wtforms.fields.html5 import EmailField
 from wtforms.validators import DataRequired, Length
 
 
