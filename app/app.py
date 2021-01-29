@@ -1,9 +1,10 @@
 """Main app."""
 from flask import Flask
-from config import BaseConfig
+from dotenv import load_dotenv
 
-from blueprints.page import page
-from extensions import csrf, mail
+from app.config import BaseConfig
+from app.blueprints.page import page
+from app.extensions import csrf, mail
 
 
 def create_app():
@@ -14,6 +15,7 @@ def create_app():
     """
     app = Flask(__name__)
 
+    load_dotenv()
     app.config.from_object(BaseConfig)
 
     app.register_blueprint(page)
@@ -24,12 +26,11 @@ def create_app():
 
 def register_extensions(app):
     """
-    Register 0 or more extensions (mutates the app passed in).
+    Register extensions.
 
     :param app: Flask application instance
     :return: None
     """
     csrf.init_app(app)
     mail.init_app(app)
-
     return None

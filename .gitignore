@@ -1,20 +1,21 @@
 ###################
 # Compiled Source #
 ###################
-*.pyc
+*.py[cod]
 /__pycache__
 
 
 ###############
-# Directories #
+# Directories/Misc #
 ###############
-/.DS_Store
+.DS_Store
+.idea
 /venv
-/instance/settings.py
 
 
 #########
-# Local #
+# Environments #
 #########
-config.py
 .env
+.flaskenv
+env/
