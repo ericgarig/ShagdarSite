@@ -3,7 +3,7 @@ import re
 from flask_mail import Message
 
 from flask import current_app
-from app.extensions import mail
+from extensions import mail
 
 
 def as_bool(v):

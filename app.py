@@ -2,9 +2,9 @@
 from flask import Flask
 from dotenv import load_dotenv
 
-from app.config import BaseConfig
-from app.blueprints.page import page
-from app.extensions import csrf, mail
+from config import BaseConfig
+from blueprints.page import page
+from extensions import csrf, mail
 
 
 def create_app():

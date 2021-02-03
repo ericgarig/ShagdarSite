@@ -1,6 +1,6 @@
 import os
 
-from app.utils.functions import as_bool
+from utils import as_bool
 
 
 class BaseConfig(object):

@@ -1,8 +1,8 @@
 """Page endpoints."""
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 
-from app.blueprints.page import ContactForm
-from app.utils.functions import detect_spam, send_mail
+from blueprints.page import ContactForm
+from utils import detect_spam, send_mail
 
 
 page = Blueprint("page", __name__, template_folder="templates")
